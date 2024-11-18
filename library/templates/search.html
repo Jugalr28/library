@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center center">Search Books</h2>
+
+
+
+<table class="table table-bordered">
+    <tr><th>Title</th><th>Author</th><th>Language</th><th>Price</th><th>Pages</th></tr>
+    {% for i in book %}
+    <tr>
+        <td><img height="100px" width="100px" src="{{i.cover.url}}"></td>
+        <td>{{i.title}}</td>
+        <td>{{i.author}}</td>
+        <td>{{i.language}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.page}}</td>
+        <td><a href="{{i.pdf.url}}">download</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,8 @@
+position
+
+position:static(default)
+ 
+position:relative
+position:fixed
+position:absolute
+position:sticky

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center center mt-3">View Users</h2>
+<table class="table table-dark table-striped table-bordered mt-4">
+    <tr><th>NAME</th><th>AGE</th><th>PLACE</th><th>GENDER</th><th>E-MAILS</th></tr>
+    {% for i in User %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.place}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.email}}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+{% endblock %}
